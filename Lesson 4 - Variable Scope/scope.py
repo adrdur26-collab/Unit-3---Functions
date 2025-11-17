@@ -85,3 +85,36 @@ score = add_points(score)
 # Challenge 2: Game Score Calculator
 # Instructions: Calculate game score using constants and functions with proper scope
 # ============================================================================
+
+# HOMEWORK
+def square_plus_one(n):
+    return n*n + 1
+
+print(square_plus_one(3)) 
+print(square_plus_one(5))
+
+
+def register_user(name, age):
+    return f"User {name}, {age} years old, registered"
+
+print(register_user("Alice", 23))
+
+
+
+my_list = []
+
+def update_global_list(item):
+    global my_list
+    my_list.append(item)
+    return my_list
+
+print(update_global_list("apple")) 
+print(update_global_list("banana"))
+
+
+
+def convert_to_fahrenheit(celsius):
+    return celsius * 9/5 + 32
+
+print(convert_to_fahrenheit(0)) 
+print(convert_to_fahrenheit(100))
