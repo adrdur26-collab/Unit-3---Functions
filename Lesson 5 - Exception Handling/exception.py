@@ -62,15 +62,15 @@ Lesson 5: Exception Handling - Practice Exercises
 # Practice 2: Safe Input
 # Instructions: Create a function that safely gets an integer from user
 # ==========================
-def get_age():
-    try:
-        age = int(input("Enter age: "))
-        return age
-    except ValueError:
-        print("Please enter a number!")
-        return 0 
-user_age = get_age()
-print(f"You are {user_age} years old.")
+# def get_age():
+#     try:
+#         age = int(input("Enter age: "))
+#         return age
+#     except ValueError:
+#         print("Please enter a number!")
+#         return 0 
+# user_age = get_age()
+# print(f"You are {user_age} years old.")
 
 # ==========================
 # Challenge 1: Safe Calculator
@@ -83,3 +83,17 @@ print(f"You are {user_age} years old.")
 # Challenge 2: Grade Input Validator
 # Instructions: Keep asking for a grade until a valid number between 0-100 is entered
 # ==========================
+def get_valid_grade():
+    while True:
+        try:
+            grade = float(input("Enter grade (0-100): "))
+            if 0 <= grade <= 100:
+                return grade
+            else:
+                print("Error: Grade must be between 0 and 100!")
+        except ValueError:
+            print("Error: Please enter a valid number!")
+
+print("=== Challeneg 2 ===")
+valid_grade = get_valid_grade()
+print(f"Valid grade entered: {valid_grade}")
