@@ -45,19 +45,21 @@ Lesson 5: Exception Handling - Practice Exercises
 # Instructions: Create a function that divides two numbers safely
 # ==========================
 
-# def safe_divide(a, b):
-#     try:
-#         result = a / b
-#         return result
+def safe_divide(a, b):
+    try:
+        result = int(a) / b
+        return result
 #     # except:
 #     #     print("An error occured!")
 #     #     return 0
 #     except ZeroDivisionError:
 #         print("Warning: Division by Zero!")
 #         return 0
+    except Exception as error:
+        print(f"An error occurred: {error}")
 
-# print(safe_divide(10, 2))
-# print(safe_divide(10, 0))
+print(safe_divide('hello', 2))
+print(safe_divide(10, 0))
 # ==========================
 # Practice 2: Safe Input
 # Instructions: Create a function that safely gets an integer from user
@@ -83,17 +85,17 @@ Lesson 5: Exception Handling - Practice Exercises
 # Challenge 2: Grade Input Validator
 # Instructions: Keep asking for a grade until a valid number between 0-100 is entered
 # ==========================
-def get_valid_grade():
-    while True:
-        try:
-            grade = float(input("Enter grade (0-100): "))
-            if 0 <= grade <= 100:
-                return grade
-            else:
-                print("Error: Grade must be between 0 and 100!")
-        except ValueError:
-            print("Error: Please enter a valid number!")
+# def get_valid_grade():
+#     while True:
+#         try:
+#             grade = float(input("Enter grade (0-100): "))
+#             if 0 <= grade <= 100:
+#                 return grade
+#             else:
+#                 print("Error: Grade must be between 0 and 100!")
+#         except ValueError:
+#             print("Error: Please enter a valid number!")
 
-print("=== Challeneg 2 ===")
-valid_grade = get_valid_grade()
-print(f"Valid grade entered: {valid_grade}")
+# print("=== Challeneg 2 ===")
+# valid_grade = get_valid_grade()
+# print(f"Valid grade entered: {valid_grade}")
